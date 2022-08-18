@@ -1,0 +1,15 @@
+table {
+    width: 100%;
+}
+
+.table-area {
+    padding-top: 50px;
+}
+
+.table-area th {
+    background-color: rgb(0, 195, 255);
+}
+
+.mat-row.highlighted {
+    background: #999;
+  }

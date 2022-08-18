@@ -1,0 +1,38 @@
+<!-- <header>
+  <ng-content select=".toogle-header"></ng-content>
+</header>
+<div
+  class="toggle-wrapper"
+  [class.checked]="checked"
+  tabindex="0"
+  (click)="toggle()"
+>
+  <div class="toggle"></div>
+</div>
+<div class="toogle-label">
+  <ng-content select="app-label"></ng-content>
+</div>
+<div class="toggle-content">
+  <ng-content></ng-content>
+</div> -->
+<ng-template
+  #buttonTmpl
+  let-label="label"
+  let-className="className"
+  let-icon="icon"
+>
+  <button [ngClass]="['btn', className ? className : '']">
+    <i *ngIf="icon" class="fa {{icon}}"></i>
+    {{ label }}
+  </button>
+</ng-template>
+<ng-container
+  [ngTemplateOutlet]="buttonTmpl"
+  [ngTemplateOutletContext]="{ label: 'Click here', className: 'btn-primary', icon: null }"
+>
+</ng-container>
+<ng-container
+  [ngTemplateOutlet]="buttonTmpl"
+  [ngTemplateOutletContext]="{ label: 'Remove', className: 'btn-danger', icon: 'fa-remove' }"
+>
+</ng-container>

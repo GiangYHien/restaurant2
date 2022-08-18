@@ -1,13 +1,16 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "fd04c7d3-9bad-4bff-a31f-0498cb5cbb8a"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "PROJECT_NAME": {
+    "restaurant": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
+        "@schematics/angular:application": {
+          "strict": true
         }
       },
       "root": "",
@@ -17,18 +20,17 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/project-name",
+            "outputPath": "dist/restaurant",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -69,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "PROJECT_NAME:build:production"
+              "browserTarget": "restaurant:build:production"
             },
             "development": {
-              "browserTarget": "PROJECT_NAME:build:development"
+              "browserTarget": "restaurant:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "PROJECT_NAME:build"
+            "browserTarget": "restaurant:build"
           }
         },
         "test": {
@@ -90,13 +92,12 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -104,7 +105,5 @@
       }
     }
   },
-  "cli": {
-    "analytics": "4c29f00c-29a9-43c3-b15a-78cfda2ce753"
-  }
+  "defaultProject": "restaurant"
 }

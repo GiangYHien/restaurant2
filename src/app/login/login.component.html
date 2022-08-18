@@ -1,0 +1,41 @@
+<div class="content" role="main">
+    <!-- <div>
+        <img class="img-responsive" src="assets/images/restaurant.jpg">
+    </div>
+    <h1 class="header">Login : {{user.name}}</h1>
+    <input [style.font-size]="70" type="text" [value]="user.name">
+    <div class="signUp-area">
+        <input type="text" #email (keyup)="getValue(email.value, 'email')" placeholder="Enter Email">
+        <input type="password" #password (keyup)="getValue(password.value, 'password')" placeholder="Enter Password">
+        <button (click)="onClickLogin()">Login</button>
+    </div>
+    <div *ngFor="let user of authors">
+        {{user.id}} - {{user.firstName}} {{user.lastName}}
+    </div>
+    <app-progress-bar
+    [progress]="225"
+    [backgroundColor]="'#9e9e9e'"
+    [progressColor]="'#2e8b57'"
+    ></app-progress-bar>
+    <a routerLink="/signup">Sign-Up</a> -->
+    <!-- <app-author-list></app-author-list>
+    <app-progress-bar></app-progress-bar>
+    <app-toggle [(checked)]="questions.question1">
+        <h3 class="toogle-header">Header 1</h3>
+        <label ngProjectAs="app-label">Question 1</label>
+        <span>Some paragraph</span>
+    </app-toggle>
+    <app-toggle></app-toggle> -->
+    <app-tab-group>
+        <app-tab-panel title="Tab 1">content tab 1</app-tab-panel>
+        <app-tab-panel title="Tab 2">content tab 2</app-tab-panel>
+        <app-tab-panel title="Tab 3">content tab 3</app-tab-panel>
+        <!-- More tab panel -->
+    </app-tab-group>
+    <app-bs-tab-group>
+        <app-tab-panel title="Tab 1">content tab 1</app-tab-panel>
+        <app-tab-panel title="Tab 2">content tab 2</app-tab-panel>
+        <app-tab-panel title="Tab 3">content tab 3</app-tab-panel>
+    </app-bs-tab-group>
+</div>
+

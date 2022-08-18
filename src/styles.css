@@ -1,0 +1,56 @@
+html {
+    background: url('https://www.google.com.vn/url?sa=i&url=http%3A%2F%2Fhinhnenhd.com%2Fbackground-dep%2F&psig=AOvVaw0sy4_Pm2bGCS9HGnQzMlP0&ust=1652426741854000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCICm1bm32fcCFQAAAAAdAAAAABAK');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.content {
+    display: flex;
+    margin: 0px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content a {
+    font-size: 20px;
+}
+
+.signUp-area {
+    color: blueviolet;
+    font-size: 30px;
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+}
+
+.signUp-area input {
+    height: 40px;
+    width: 300px;
+    border: 1px solid black;
+    display: flex;
+    margin: 15px;
+    padding-left: 10px;
+    margin-left: 0px;
+}
+
+.signUp-area button {
+    height: 45px;
+    width: 315px;
+    border: 1px solid black;
+    margin: 15px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background: #65b5edc7;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+}
+
+.img-responsive {
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}

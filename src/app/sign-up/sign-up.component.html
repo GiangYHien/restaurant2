@@ -1,0 +1,14 @@
+<div class="content" role="main">
+    <div>
+        <img class="img-responsive" src="assets/images/restaurant.jpg">
+    </div>
+    <h1 class="header">Sign-Up</h1>
+    <div class="signUp-area">
+        <input type="text" #name (keyup)="getValue(name.value, 'name')" placeholder="Enter Name">
+        <input type="text" #email (keyup)="getValue(email.value, 'email')" placeholder="Enter Email">
+        <input type="password" #password (keyup)="getValue(password.value, 'password')" placeholder="Enter Password">
+        <button (click)="onClickSignUp()">Sign Up</button>
+    </div>
+    <a routerLink="/login">Login</a>
+</div>
+

@@ -1,0 +1,11 @@
+<app-header></app-header>
+<div class="content add-res" role="main">
+    <h1 class="header">Hello user, Welcome to add restaurant page</h1>
+    <div class="signUp-area">
+        <input type="text" #name (keyup)="getValue(name.value, 'name')" placeholder="Enter Name">
+        <input type="text" #address (keyup)="getValue(address.value, 'address')" placeholder="Enter Address">
+        <input type="text" #contact (keyup)="getValue(contact.value, 'contact')" placeholder="Enter Phone Number">
+        <button (click)="onClickAddres()">Add</button>
+    </div>
+</div>
+

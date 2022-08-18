@@ -1,10 +1,20 @@
 import { Component } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'PROJECT_NAME';
+  constructor(private http: HttpClient) { }
+  title = 'restaurant';
+  ngOnInit() {
+    this.getConfig();
+  }
+  getConfig() {
+    this.http.get('http://localhost:3000/restaurant')
+      .subscribe(response => {
+        console.log(response);
+      });
+  }
 }
