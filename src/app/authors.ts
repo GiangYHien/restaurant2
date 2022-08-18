@@ -1,3 +1,8 @@
+export interface User {
+  name: string;
+  age: number;
+}
+
 export interface Author {
     id: number;
     firstName: string;

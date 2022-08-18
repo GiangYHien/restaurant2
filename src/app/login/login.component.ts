@@ -15,6 +15,9 @@ export class LoginComponent implements OnInit {
   toggleInside() {
     this.toggleComp.toggle();
   }
+  userId = "true";
+  now = '2020-06-24T09:00:00.000Z';
+  tabShow: boolean = true;
   questions = {
     question1: true,
     question2: true,

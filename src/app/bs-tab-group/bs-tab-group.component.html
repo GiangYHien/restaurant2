@@ -1,9 +1,8 @@
 <ul class="nav nav-tabs" role="tablist">
 	<li class="nav-item" role="presentation" *ngFor="let tab of tabPanelList; index as idx" (click)="selectItem(idx)">
 		<a class="nav-link" [class.active]="idx === tabActiveIndex" role="tab" aria-selected="true">{{tab.title}}
-      <button (click)="removeTabPanel(tab)">X</button>
+      <!-- <button (click)="removeTabPanel(tab)">X</button> -->
     </a>
-    <!-- <button (click)="removeTabPanel(tab)">X</button> -->
 	</li>
 
 </ul>

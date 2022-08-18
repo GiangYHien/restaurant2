@@ -16,7 +16,10 @@ import { ToggleComponent } from './toggle/toggle.component';
 import { TabGroupComponent } from './tab-group/tab-group.component';
 import { TabPanelComponent } from './tab-panel/tab-panel.component';
 import { BsTabGroupComponent } from './bs-tab-group/bs-tab-group.component';
-
+import { AppCounterComponent } from './app-counter/app-counter.component';
+import { TabPanelContentDirective } from './tab-panel-content.directive';
+import { AppTitlePipe } from './shared/pipe/appTitle.pipe';
+import { PipeExampleComponent } from './pipe-example/pipe-example.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +35,10 @@ import { BsTabGroupComponent } from './bs-tab-group/bs-tab-group.component';
     TabGroupComponent,
     TabPanelComponent,
     BsTabGroupComponent,
+    AppCounterComponent,
+    TabPanelContentDirective,
+    AppTitlePipe,
+    PipeExampleComponent
   ],
   imports: [
     BrowserModule,

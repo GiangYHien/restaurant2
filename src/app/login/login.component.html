@@ -26,16 +26,29 @@
         <span>Some paragraph</span>
     </app-toggle>
     <app-toggle></app-toggle> -->
-    <app-tab-group>
-        <app-tab-panel title="Tab 1">content tab 1</app-tab-panel>
-        <app-tab-panel title="Tab 2">content tab 2</app-tab-panel>
-        <app-tab-panel title="Tab 3">content tab 3</app-tab-panel>
-        <!-- More tab panel -->
-    </app-tab-group>
+    <h2 class="ibox-title">{{ userId | appTitle:"Set":"Change" }} User</h2>
+    <div>{{ now | date:'medium' | uppercase}}</div>
+    <button (click)="tabShow = !tabShow">Toogle Bab</button>
     <app-bs-tab-group>
-        <app-tab-panel title="Tab 1">content tab 1</app-tab-panel>
-        <app-tab-panel title="Tab 2">content tab 2</app-tab-panel>
-        <app-tab-panel title="Tab 3">content tab 3</app-tab-panel>
+        <app-tab-panel title="Tab 1">
+            <ng-template tabPanelContent>
+                content tab 1
+                <app-app-counter></app-app-counter>    
+            </ng-template>
+        </app-tab-panel>
+        <app-tab-panel title="Tab 2">
+            <ng-template tabPanelContent>
+                content tab 2
+                <app-app-counter></app-app-counter>    
+            </ng-template>
+        </app-tab-panel>
+        <app-tab-panel title="Tab 3" *ngIf="tabShow">
+            <ng-template tabPanelContent>
+                content tab 3
+                <app-app-counter></app-app-counter>    
+            </ng-template>
+        </app-tab-panel>
     </app-bs-tab-group>
+    <app-pipe-example></app-pipe-example>
 </div>
 
