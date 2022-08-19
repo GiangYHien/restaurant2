@@ -18,8 +18,9 @@ import { TabPanelComponent } from './tab-panel/tab-panel.component';
 import { BsTabGroupComponent } from './bs-tab-group/bs-tab-group.component';
 import { AppCounterComponent } from './app-counter/app-counter.component';
 import { TabPanelContentDirective } from './tab-panel-content.directive';
-import { AppTitlePipe } from './shared/pipe/appTitle.pipe';
+import { AppTitlePipe, IsAdultPipe } from './shared/pipe/appTitle.pipe';
 import { PipeExampleComponent } from './pipe-example/pipe-example.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { PipeExampleComponent } from './pipe-example/pipe-example.component';
     AppCounterComponent,
     TabPanelContentDirective,
     AppTitlePipe,
-    PipeExampleComponent
+    PipeExampleComponent,
+    IsAdultPipe
   ],
   imports: [
     BrowserModule,

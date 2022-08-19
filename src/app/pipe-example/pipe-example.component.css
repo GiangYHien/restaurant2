@@ -1,0 +1,11 @@
+.input-area > input{
+    padding: 10px;
+    display: grid;
+    margin: 10px;
+}
+.input-area > button{
+    padding: 5px;
+    display: grid;
+    margin: 10px;
+    background-color: blueviolet;
+}

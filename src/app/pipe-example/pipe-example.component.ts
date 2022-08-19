@@ -26,7 +26,11 @@ export class PipeExampleComponent implements OnInit {
       age: 16
     }
   ];
-  constructor() { }
+  user: User;
+  constructor() { 
+    this.user = new User();
+  }
+
 
   ngOnInit(): void {
   }
@@ -39,5 +43,24 @@ export class PipeExampleComponent implements OnInit {
     }),
     takeWhile((val) => val >= 0)
   );
-
+  getValue(value: any, type: string): void {
+    switch (type) {
+      case 'name':
+        this.user.name = value;
+        break;
+      case 'age':
+        this.user.age = Number(value);
+        break;
+      default:
+        console.log(type);
+    }
+  }
+  addUser(): void {
+   /*  if(this.user.name !== '' && this.user.age > 0 ){
+      this.users= [...this.users, this.user]
+      this.user = new User();
+    } */
+    this.users = [...this.users, this.user];
+    this.user = new User();
+  }
 }
